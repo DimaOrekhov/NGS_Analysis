@@ -1,0 +1,5 @@
+Commands I used to align reads via minimap2:
+
+>/opt/minimap2/minimap2 -a Data/Assignment_3/reference.fasta Data/Assignment_3/ONT_2D.fastq > Data/Assignment_3/onp_al.sam
+
+Then a standard samtools protocol to convert to .bam, sort and index (samtools view -S -b; samtools sort; samtools index).

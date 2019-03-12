@@ -1,0 +1,21 @@
+BWA commands:
+
+bwa index [reference]
+bwa mem [reference] [forward] [backward] > alignment.sam
+
+Samtools:
+samtools view -S -b alignment.sam > alignment.bam
+
+Commands I used:
+
+>/opt/bwa/bwa index Data/Assignment_2/B.faecium/ref.fasta
+
+>/opt/bwa/bwa mem Data/Assignment_2/B.faecium/ref.fasta Data/Assignment_2/B.faecium/Dataset1/frag.R1.fastq Data/Assignment_2/B.faecium/Dataset1/frag.R1.fastq > Data/Assignment_2/bfaecium1.sam
+
+>samtools view -S -b Data/Assignment_2/bfaecium.sam > Data/Assignment_2/bfaecium1.bam
+
+>samtools sort Data/Assignment_2/bfaecium1.bam -o Data/Assignment_2/bfaecium1_s.bam
+
+>samtools index Data/Assignment_2/bfaecium1_s.bam 
+
+Same for the second B.faecium dataset.
